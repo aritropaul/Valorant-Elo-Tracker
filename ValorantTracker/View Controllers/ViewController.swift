@@ -151,7 +151,17 @@ extension ViewController : UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "matchCell") as! MatchTableViewCell
         let match = matches[indexPath.row]
-        cell.pointDiffLabel.text = "\(match.tierProgressAfterUpdate - match.tierProgressBeforeUpdate)"
+        if match.competitiveMovement == "PROMOTED" {
+            cell.pointDiffLabel.text = "\(match.tierProgressAfterUpdate - match.tierProgressBeforeUpdate + 100)"
+        }
+        else if match.competitiveMovement == "DEMOTED" {
+            cell.pointDiffLabel.text = "\(match.tierProgressAfterUpdate - match.tierProgressBeforeUpdate - 100)"
+        }
+        else {
+            cell.pointDiffLabel.text = "\(match.tierProgressAfterUpdate - match.tierProgressBeforeUpdate)"
+        }
+        
+        
         if match.mapID.contains("Duality") {
             cell.mapNameLabel.text = "Bind"
         }
