@@ -1,5 +1,5 @@
 
-![](https://github.com/aritropaul/Valorant-Elo-Tracker/blob/main/Assets/Artboard%20%E2%80%93%202.png?raw=true)
+![](https://github.com/aritropaul/Valorant-Elo-Tracker/blob/master/Assets/Artboard%20%E2%80%93%202.png?raw=true)
 
 # Valorant ELO Tracker
 An iOS App that tracks your progress on Valorant.
