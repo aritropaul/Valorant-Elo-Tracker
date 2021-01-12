@@ -94,10 +94,11 @@ class ViewController: UIViewController {
             }
         }
         else {
-            let alert = UIAlertController(title: "Not Logged In", message: "Please login through Settings First", preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let loginVC = storyboard.instantiateViewController(withIdentifier: "loginVC") as! LoginViewController
+            loginVC.delegate = self
             DispatchQueue.main.async {
-                self.present(alert, animated: true, completion: nil)
+                self.present(loginVC, animated: true, completion: nil)
                 self.refreshControl.endRefreshing()
             }
         }
@@ -194,4 +195,13 @@ extension ViewController : UITableViewDelegate, UITableViewDataSource {
     }
     
     
+}
+
+
+//MARK:- Login Delegate
+
+extension ViewController : LoginDelegate {
+    func didPerformLogin() {
+        refresh()
+    }
 }

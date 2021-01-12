@@ -160,11 +160,92 @@
                         <outlet property="rankIcon" destination="SJc-S9-gbC" id="bnR-EO-fV9"/>
                         <outlet property="rankLabel" destination="G8S-or-NUO" id="b7z-af-eaq"/>
                         <outlet property="tableView" destination="5uL-jf-WIw" id="Ku8-Cn-RfG"/>
+                        <segue destination="UVo-Ez-vhQ" kind="presentation" id="hxt-m1-g5Z"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="960.86956521739137" y="93.75"/>
+        </scene>
+        <!--Login View Controller-->
+        <scene sceneID="ZZH-JE-9Hs">
+            <objects>
+                <viewController storyboardIdentifier="loginVC" id="UVo-Ez-vhQ" customClass="LoginViewController" customModule="ValorantTracker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="907-AE-DKv">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Riot Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6ln-nU-gwS">
+                                <rect key="frame" x="48" y="355.5" width="318" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Pno-l4-5lo"/>
+                                </constraints>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" textContentType="username"/>
+                            </textField>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Valorant" translatesAutoresizingMaskIntoConstraints="NO" id="vHb-qz-NG7">
+                                <rect key="frame" x="124" y="90" width="166" height="165.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="vHb-qz-NG7" secondAttribute="height" multiplier="1:1" id="KQF-14-uC0"/>
+                                </constraints>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Riot Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="W2v-C6-MWx">
+                                <rect key="frame" x="48" y="410.5" width="318" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="LXH-6X-T1y"/>
+                                </constraints>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R5U-ez-Qtg">
+                                <rect key="frame" x="48" y="490.5" width="318" height="40"/>
+                                <color key="backgroundColor" name="DarkBlue"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="ahs-GF-qoI"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="StudioFeixenSans-EdgyMedium" family="Studio Feixen Sans Edgy" pointSize="17"/>
+                                <state key="normal" title="Login">
+                                    <color key="titleColor" name="Aqua"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="loginTapped:" destination="UVo-Ez-vhQ" eventType="touchUpInside" id="bao-3F-Uet"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="faT-Ia-AfN"/>
+                        <color key="backgroundColor" red="0.065461449330000004" green="0.099138535560000005" blue="0.13148546219999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="faT-Ia-AfN" firstAttribute="trailing" secondItem="R5U-ez-Qtg" secondAttribute="trailing" constant="48" id="32v-r6-MvI"/>
+                            <constraint firstItem="W2v-C6-MWx" firstAttribute="top" secondItem="6ln-nU-gwS" secondAttribute="bottom" constant="15" id="39O-VH-Nog"/>
+                            <constraint firstItem="W2v-C6-MWx" firstAttribute="leading" secondItem="faT-Ia-AfN" secondAttribute="leading" constant="48" id="ES6-vb-eOz"/>
+                            <constraint firstItem="vHb-qz-NG7" firstAttribute="centerX" secondItem="907-AE-DKv" secondAttribute="centerX" id="FDK-aa-GjV"/>
+                            <constraint firstItem="R5U-ez-Qtg" firstAttribute="centerX" secondItem="907-AE-DKv" secondAttribute="centerX" id="Glp-8e-QOv"/>
+                            <constraint firstItem="W2v-C6-MWx" firstAttribute="centerX" secondItem="907-AE-DKv" secondAttribute="centerX" id="H2S-Cd-SVY"/>
+                            <constraint firstItem="6ln-nU-gwS" firstAttribute="leading" secondItem="faT-Ia-AfN" secondAttribute="leading" constant="48" id="J9x-Ju-Mf4"/>
+                            <constraint firstItem="R5U-ez-Qtg" firstAttribute="top" secondItem="W2v-C6-MWx" secondAttribute="bottom" constant="40" id="LsS-fz-7PV"/>
+                            <constraint firstItem="6ln-nU-gwS" firstAttribute="top" secondItem="vHb-qz-NG7" secondAttribute="bottom" constant="100" id="XGZ-6B-1uK"/>
+                            <constraint firstItem="R5U-ez-Qtg" firstAttribute="leading" secondItem="faT-Ia-AfN" secondAttribute="leading" constant="48" id="dkL-K0-oxb"/>
+                            <constraint firstItem="faT-Ia-AfN" firstAttribute="trailing" secondItem="6ln-nU-gwS" secondAttribute="trailing" constant="48" id="qJG-Y6-x34"/>
+                            <constraint firstItem="faT-Ia-AfN" firstAttribute="trailing" secondItem="W2v-C6-MWx" secondAttribute="trailing" constant="48" id="qMN-k5-ZAi"/>
+                            <constraint firstItem="vHb-qz-NG7" firstAttribute="width" secondItem="907-AE-DKv" secondAttribute="width" multiplier="0.4" id="sg4-sO-FYg"/>
+                            <constraint firstItem="vHb-qz-NG7" firstAttribute="top" secondItem="faT-Ia-AfN" secondAttribute="top" constant="90" id="yjD-qN-42h"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="passwordField" destination="W2v-C6-MWx" id="WQD-VA-6Ds"/>
+                        <outlet property="usernameField" destination="6ln-nU-gwS" id="CBY-70-KfV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dOr-qY-h1F" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="960.86956521739137" y="781.47321428571422"/>
         </scene>
         <!--Settings-->
         <scene sceneID="TOm-KD-5pv">
@@ -451,6 +532,7 @@
     <resources>
         <image name="CellBack" width="338" height="70"/>
         <image name="Platinum 3" width="256" height="256"/>
+        <image name="Valorant" width="3200" height="3200"/>
         <image name="aritro" width="256.5" height="182"/>
         <image name="gear" catalog="system" width="128" height="119"/>
         <image name="lock.fill" catalog="system" width="128" height="128"/>
@@ -458,6 +540,9 @@
         <image name="person.crop.circle.fill" catalog="system" width="128" height="121"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>
         <image name="xmark" catalog="system" width="128" height="113"/>
+        <namedColor name="Aqua">
+            <color red="0.23529411764705882" green="0.93725490196078431" blue="0.77254901960784317" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="DarkBlue">
             <color red="0.094117647058823528" green="0.16078431372549021" blue="0.32156862745098042" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

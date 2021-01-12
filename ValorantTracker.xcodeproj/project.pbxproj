@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		304FDE9625A4ACD100A2404C /* StudioFeixenSans-EdgyMedium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 304FDE9525A4ACD100A2404C /* StudioFeixenSans-EdgyMedium.ttf */; };
+		3069CC0D25ADADFC00FDF980 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3069CC0C25ADADFC00FDF980 /* LoginViewController.swift */; };
 		307B067B25A4B4190051D7DF /* MatchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 307B067A25A4B4190051D7DF /* MatchTableViewCell.swift */; };
 		307B067E25A4B7FC0051D7DF /* RankModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 307B067D25A4B7FC0051D7DF /* RankModel.swift */; };
 		308BEDFA25A46E58007AC08B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308BEDF925A46E58007AC08B /* AppDelegate.swift */; };
@@ -25,6 +26,7 @@
 
 /* Begin PBXFileReference section */
 		304FDE9525A4ACD100A2404C /* StudioFeixenSans-EdgyMedium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "StudioFeixenSans-EdgyMedium.ttf"; sourceTree = "<group>"; };
+		3069CC0C25ADADFC00FDF980 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		307B067A25A4B4190051D7DF /* MatchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchTableViewCell.swift; sourceTree = "<group>"; };
 		307B067D25A4B7FC0051D7DF /* RankModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankModel.swift; sourceTree = "<group>"; };
 		308BEDF625A46E58007AC08B /* ValorantTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ValorantTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -57,6 +59,7 @@
 			isa = PBXGroup;
 			children = (
 				308BEDFD25A46E58007AC08B /* ViewController.swift */,
+				3069CC0C25ADADFC00FDF980 /* LoginViewController.swift */,
 				30A9098B25A4F74A003B1688 /* SettingsViewController.swift */,
 			);
 			path = "View Controllers";
@@ -204,6 +207,7 @@
 				308BEDFA25A46E58007AC08B /* AppDelegate.swift in Sources */,
 				308BEE1825A47BCE007AC08B /* UserModel.swift in Sources */,
 				308BEDFC25A46E58007AC08B /* SceneDelegate.swift in Sources */,
+				3069CC0D25ADADFC00FDF980 /* LoginViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
